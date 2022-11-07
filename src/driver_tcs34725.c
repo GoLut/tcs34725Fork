@@ -77,7 +77,12 @@
 /**
  * @brief iic address definition
  */
-#define TCS34725_ADDRESS        (0x29 << 1)        /**< iic address */
+// // #define TCS34725_ADDRESS        (0x29 << 1)        /**< iic address */
+
+// //for the use on the due we don't want the additional 0 in the beginning: 
+// //https://forum.arduino.cc/t/programm-error-assertion-address-0x80-0-failed/133060/5
+// #define TCS34725_ADDRESS        0x29        /**< iic address */
+
 
 /**
  * @brief     enable or disable the rgbc interrupt

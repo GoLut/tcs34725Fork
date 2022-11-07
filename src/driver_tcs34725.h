@@ -52,6 +52,7 @@ extern "C"{
  * @{
  */
 
+
 /**
  * @addtogroup tcs34725_base_driver
  * @{
@@ -78,6 +79,17 @@ typedef enum
     TCS34725_INTEGRATION_TIME_154MS = 0xC0,        /**< integration time 154 ms */
     TCS34725_INTEGRATION_TIME_700MS = 0x00,        /**< integration time 700 ms */
 } tcs34725_integration_time_t;
+
+
+/**
+ * @brief iic address definition
+ */
+// // #define TCS34725_ADDRESS        (0x29 << 1)        /**< iic address */
+
+//for the use on the due we don't want the additional 0 in the beginning: 
+//https://forum.arduino.cc/t/programm-error-assertion-address-0x80-0-failed/133060/5
+#define TCS34725_ADDRESS        0x29        /**< iic address */
+
 
 /**
  * @brief tcs34725 gain enumeration definition
